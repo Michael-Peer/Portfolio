@@ -58,6 +58,8 @@ function onOpenModal(projId) {
   console.log(projId, "projif")
   var proj = getProjById(projId)
 
+  const categories = proj.labels.join(", ")
+
 
   // $('.portfolio-modal').show()
   // $('.portfolio-modal').attr("aria-hidden", "false")
@@ -65,6 +67,7 @@ function onOpenModal(projId) {
   $('.item-intro').text(proj.title)
   $('.modal-desc').text(proj.desc)
   $('.modal-img').attr('src', `img/portfolio/${proj.id}.jpg`)
+  $('.modal-categories').text(`Categories: ${categories}`)
   $('.btn-github').on('click', function onGithunLinkClicked() {
     window.open(proj.url)
   })
