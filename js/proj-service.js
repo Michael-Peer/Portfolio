@@ -27,7 +27,7 @@ function _createProjects() {
             'Minesweeper',
             'Advanced Minesweeper',
             'Minesweeper with added features',
-            '...github',
+            'https://michael-peer.github.io/Minesweeper/',
             'minesweeper.png',
             ['game', 'web', 'js']
         ), _createProject(
@@ -35,7 +35,7 @@ function _createProjects() {
             'ParkE',
             'Find Parkings',
             'Find Parkings around you',
-            '...github',
+            'https://github.com/Michael-Peer/Final-Project---Flutter',
             'parke.png',
             ['application', 'phone', 'dart']
         ),
@@ -44,9 +44,9 @@ function _createProjects() {
             'Shareit',
             'New way to share articles',
             'Read, Save and share your favourite articles across phones and devices',
-            '...github',
+            'https://github.com/Michael-Peer/ShareWay/blob/master/app/src/main/java/com/example/shareway/MainActivity.kt',
             'shareit.png',
-            ['application', 'phone', 'dart']
+            ['application', 'phone', 'kotlin', 'android']
         )]
 }
 

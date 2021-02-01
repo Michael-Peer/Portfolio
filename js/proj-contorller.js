@@ -2,37 +2,37 @@
 
 //document.ready() IIFE
 $(function onInit() {
-    console.log("Ready!!")
+  console.log("Ready!!")
 
-    $('.contact-form').on('submit', onFormSubmit)
-    renderPortfolio()
+  $('.contact-form').on('submit', onFormSubmit)
+  renderPortfolio()
 })
 
 
 function onFormSubmit(ev) {
-    ev.preventDefault()
+  ev.preventDefault()
 
-    const inputs = $('.contact-form').serializeArray()
-    var email = $('#email-input').val()
-    var subject = $('#subject-input').val()
-    var msg = $('#message-input').val()
-    console.log(email, subject, msg)
-    const url = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&b
+  const inputs = $('.contact-form').serializeArray()
+  var email = $('#email-input').val()
+  var subject = $('#subject-input').val()
+  var msg = $('#message-input').val()
+  console.log(email, subject, msg)
+  const url = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&b
     ody=${msg}`
-    window.open(url)
-    openCanvas()//close
- 
+  window.open(url)
+  openCanvas()//close
+
 }
 
 
 
 function renderPortfolio() {
 
-    var projs = getProjs()
+  var projs = getProjs()
 
-    var strHtml = projs.map(function (proj, idx) {
-        console.log(idx, 'idx')
-        return `
+  var strHtml = projs.map(function (proj, idx) {
+    console.log(idx, 'idx')
+    return `
         <div onClick="onOpenModal('${proj.id}')" data-id="${proj.id}" class="col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal">
             <div class="portfolio-hover">
@@ -48,21 +48,24 @@ function renderPortfolio() {
           </div>
         </div>
         `
-    })
+  })
 
-    $('.portfolio-items').html(strHtml)
+  $('.portfolio-items').html(strHtml)
 
 }
 
 function onOpenModal(projId) {
-    console.log(projId, "projif")
-    var proj = getProjById(projId)
+  console.log(projId, "projif")
+  var proj = getProjById(projId)
 
 
-    // $('.portfolio-modal').show()
-    // $('.portfolio-modal').attr("aria-hidden", "false")
-    $('.modal-body h2').text(proj.name)
-    $('.item-intro').text(proj.title)
-    $('.modal-desc').text(proj.desc)
-    $('.modal-img').attr('src', `img/portfolio/${proj.id}.jpg`)
+  // $('.portfolio-modal').show()
+  // $('.portfolio-modal').attr("aria-hidden", "false")
+  $('.modal-body h2').text(proj.name)
+  $('.item-intro').text(proj.title)
+  $('.modal-desc').text(proj.desc)
+  $('.modal-img').attr('src', `img/portfolio/${proj.id}.jpg`)
+  $('.btn-github').on('click', function onGithunLinkClicked() {
+    window.open(proj.url)
+  })
 }
