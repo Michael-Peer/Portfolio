@@ -86,7 +86,6 @@ body {
     position: fixed;
     height: 100%;
     background: whitesmoke;
-    min-width:  400px;
     right: -80vw;
     z-index: 10;
     transition: all 0.3s ease;
@@ -116,7 +115,7 @@ body {
 }
 .offcanvas-aside-open {
     right: 0;
-    
+    min-width: 400px; /* Keep 400px while open, prevent overflow */
 }
 
 /* .img-portfolio {
