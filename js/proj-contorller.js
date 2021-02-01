@@ -59,9 +59,6 @@ function onOpenModal(projId) {
   var proj = getProjById(projId)
 
   const categories = proj.labels.join(", ")
-  var projUrl = proj.url
-
-
   // $('.portfolio-modal').show()
   // $('.portfolio-modal').attr("aria-hidden", "false")
   $('.modal-body h2').text(proj.name)
