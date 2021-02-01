@@ -3,10 +3,26 @@
 //document.ready() IIFE
 $(function onInit() {
     console.log("Ready!!")
+
+    $('.contact-form').on('submit', onFormSubmit)
     renderPortfolio()
 })
 
 
+function onFormSubmit(ev) {
+    ev.preventDefault()
+
+    const inputs = $('.contact-form').serializeArray()
+    var email = $('#email-input').val()
+    var subject = $('#subject-input').val()
+    var msg = $('#message-input').val()
+    console.log(email, subject, msg)
+    const url = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&b
+    ody=${msg}`
+    window.open(url)
+    openCanvas()//close
+ 
+}
 
 
 

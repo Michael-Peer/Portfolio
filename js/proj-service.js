@@ -36,7 +36,16 @@ function _createProjects() {
             'Find Parkings',
             'Find Parkings around you',
             '...github',
-            '...img',
+            'parke.png',
+            ['application', 'phone', 'dart']
+        ),
+        _createProject(
+            'shareit',
+            'Shareit',
+            'New way to share articles',
+            'Read, Save and share your favourite articles across phones and devices',
+            '...github',
+            'shareit.png',
             ['application', 'phone', 'dart']
         )]
 }
