@@ -17,7 +17,7 @@ function onFormSubmit(ev) {
   var subject = $('#subject-input').val()
   var msg = $('#message-input').val()
   console.log(email, subject, msg)
-  const url = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&b
+  const url = `https://mail.google.com/mail/?view=cm&fs=1&to=michaelpeer2004@gmail.com&su=${subject}&b
     ody=${msg}`
   window.open(url)
   openCanvas()//close
